@@ -25,8 +25,19 @@ $f3 -> route('GET /', function ()
 );
 
 //set a route for order
-$f3 -> route('GET /order', function ()
+$f3 -> route('GET|POST /order', function ($f3)
 {
+        //CHECK IF THE FORM HAS BEEN POSTED
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            //validate the data
+            if(empty($_POST['pet'])){
+                echo "please choose a pet";
+            }else {
+                echo $_POST['pet'];
+            }
+        }
+    $colors = getColor();
+    $f3 ->set('color' ,$colors) ;
     $view = new Template();
     echo $view -> render('views/pet-order.html');
 }
