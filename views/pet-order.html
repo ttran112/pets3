@@ -1,0 +1,23 @@
+<include href="views/header.html"></include>
+
+<body>
+    <h1> Order 1 for Pet</h1>
+    <form method="post" action="order2">
+        <label>What kind of pet would you like to order?
+            <input type="text" name="pet">
+        </label>
+        <br>
+        <label>Select a color
+            <select class="form-select" aria-label="Default select example" name="color">
+                <option selected>choose a color</option>
+                <option value="Red" >Red</option>
+                <option value="Blue" >Blue</option>
+                <option value="Orange" >Orange</option>
+            </select>
+        </label>
+
+        <br>
+        <input type="submit" value="Place Order">
+    </form>
+</body>
+</html>

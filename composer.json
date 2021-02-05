@@ -1,0 +1,16 @@
+{
+  "name": "dclemmer2/328/pets3",
+  "authors": [
+    {
+      "name": "Thanh Tran",
+      "email": "ttran112@mail.greenriver.edu"
+    },
+    {
+      "name": "Sarah Mehri",
+      "email": "smehri@mail.greenriver.edu"
+    }
+  ],
+  "require": {
+    "bcosca/fatfree-core": "dev-master"
+  }
+}
