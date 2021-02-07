@@ -48,6 +48,7 @@ $f3 -> route('POST /order2', function ($f3)
 {
     $sizes = getSize();
     $f3 -> set('sizes', $sizes);
+    $f3->set('accessories', getAccessories());
     //var_dump($_POST);
     if(isset($_POST['pet'])) {
         $_SESSION['pet'] = $_POST['pet'];
@@ -63,14 +64,26 @@ $f3 -> route('POST /order2', function ($f3)
 
 //summary route
 $f3 -> route ('POST /summary', function ()
+
 {
+
    if (isset($_POST['petName'])) {
        $_SESSION['petName'] = $_POST['petName'];
+
    }
+    if (isset($_POST['sizes'])) {
+        $_SESSION['size'] = $_POST['sizes'];
+    }
+    if (isset($_POST['accessories'])) {
+        $_SESSION['accessories'] = $_POST['accessories[]'];
+    }
+
+    var_dump($_SESSION);
 
     //Display a view
     $view = new Template();
     echo $view->render('views/order-summary.html');
+
 });
 //run fat free
 $f3 -> run();

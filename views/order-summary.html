@@ -2,8 +2,12 @@
 <body>
 <h1>Thank you for your order</h1>
 
-<h3>You ordered a {{ @SESSION.pet }} and it color is {{ @SESSION.color}}</h3>
+<h3>You ordered a {{ @SESSION.color }} {{ @SESSION.pet }}</h3>
 <h3>Pet name: {{ @SESSION.petName}}</h3>
+
+<p>Size: {{ @SESSION.sizes }}</p>
+<p>Accessories: {{ @SESSION.accessories }}</p>
+
 <a href="order">Place another order</a>
 <a href="{{@BASE}}">Home Page</a>
 </body>

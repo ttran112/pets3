@@ -19,6 +19,12 @@
 
         <br>
         <br>
+        <h3>Accessories</h3>
+        <repeat group="{{ @accessories }}" value="{{ @item }}">
+            <input type="checkbox" id="{{ @item }}" name="{{ @accessories }}[]" value="{{ @item }}">
+            <label for="{{ @item }}"> {{ @item }}</label>
+            <br>
+        </repeat>
         <input type="submit" value="Place Order">
     </form>
 </body>
