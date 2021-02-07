@@ -69,13 +69,15 @@ $f3 -> route ('POST /summary', function ()
 
    if (isset($_POST['petName'])) {
        $_SESSION['petName'] = $_POST['petName'];
-
    }
+
     if (isset($_POST['sizes'])) {
-        $_SESSION['size'] = $_POST['sizes'];
+        $_SESSION['sizes'] = $_POST['sizes'];
     }
+
     if (isset($_POST['accessories'])) {
-        $_SESSION['accessories'] = $_POST['accessories[]'];
+
+        $_SESSION['accessories'] = implode(", ", $_POST['accessories']);
     }
 
     var_dump($_SESSION);

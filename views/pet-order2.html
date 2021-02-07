@@ -9,20 +9,28 @@
         <br>
 
             <h3>Choose a size for your pet</h3>
-            <repeat group="{{ @sizes }}" value="{{ @sizes }}">
+
+            <repeat group="{{ @sizes }}" value="{{ @sizes }}" >
                 <br>
-                <input type="radio">
-                <label >
-                    {{ @sizes}}
-                </label>
+                <div class="form-check">
+                    <input type="radio" id="sizes" name="sizes" value="{{ @sizes}}">
+                    <label for="sizes">
+                        {{ @sizes}}
+                    </label>
+                </div>
             </repeat>
 
-        <br>
-        <br>
         <h3>Accessories</h3>
+        <!--
         <repeat group="{{ @accessories }}" value="{{ @item }}">
-            <input type="checkbox" id="{{ @item }}" name="{{ @accessories }}[]" value="{{ @item }}">
+            <input type="checkbox" id="{{ @item }}" name="{{ @accessories}}" value="{{ @item }}">
             <label for="{{ @item }}"> {{ @item }}</label>
+            <br>
+        </repeat>
+        -->
+        <repeat group="{{ @accessories }}" value="{{ @item }}">
+            <input type="checkbox" id="item" name="accessories" value="{{ @item }}">
+            <label for="item"> {{ @item }}</label>
             <br>
         </repeat>
         <input type="submit" value="Place Order">
