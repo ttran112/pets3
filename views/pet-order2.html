@@ -6,15 +6,18 @@
         <label>Pet Name:
             <input type="text" name="petName" placeholder="enter a name for your pet">
         </label>
+        <br>
 
-        <select class="form-control" name="size" id="size">
-            <option>--select a size--</option>
-            <repeat group="{{@size}}" value="{{@sizeOption}}">
-                <option>{{@sizeOption}}</option>
+            <h3>Choose a size for your pet</h3>
+            <repeat group="{{ @sizes }}" value="{{ @sizes }}">
+                <br>
+                <input type="radio">
+                <label >
+                    {{ @sizes}}
+                </label>
             </repeat>
 
-        </select>
-
+        <br>
         <br>
         <input type="submit" value="Place Order">
     </form>
