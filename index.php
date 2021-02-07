@@ -78,9 +78,10 @@ $f3 -> route ('POST /summary', function ()
     if (isset($_POST['accessories'])) {
 
         $_SESSION['accessories'] = implode(", ", $_POST['accessories']);
+      //  $_SESSION['accessories'] =  $_POST['accessories'];
     }
 
-    var_dump($_SESSION);
+
 
     //Display a view
     $view = new Template();

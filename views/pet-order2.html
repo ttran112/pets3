@@ -28,8 +28,8 @@
             <br>
         </repeat>
         -->
-        <repeat group="{{ @accessories }}" value="{{ @item }}">
-            <input type="checkbox" id="item" name="accessories" value="{{ @item }}">
+        <repeat group="{{ @accessories}}" value="{{ @item }}">
+            <input type="checkbox" id="item" name="accessories[]" value="{{ @item }}">
             <label for="item"> {{ @item }}</label>
             <br>
         </repeat>
