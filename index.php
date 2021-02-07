@@ -80,7 +80,7 @@ $f3 -> route ('POST /summary', function ()
         $_SESSION['accessories'] = implode(", ", $_POST['accessories']);
     }
 
-    var_dump($_SESSION);
+    //var_dump($_SESSION);
 
     //Display a view
     $view = new Template();
