@@ -44,8 +44,10 @@ $f3 -> route('GET|POST /order', function ($f3)
 );
 
 //set a route for order2
-$f3 -> route('POST /order2', function ()
+$f3 -> route('POST /order2', function ($f3)
 {
+    $sizes = getSize();
+    $f3 -> set('size', $sizes);
     //var_dump($_POST);
     if(isset($_POST['pet'])) {
         $_SESSION['pet'] = $_POST['pet'];

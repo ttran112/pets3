@@ -2,9 +2,18 @@
 
 <body>
     <form method="post" action="summary">
+
         <label>Pet Name:
             <input type="text" name="petName" placeholder="enter a name for your pet">
         </label>
+
+        <select class="form-control" name="size" id="size">
+            <option>--select a size--</option>
+            <repeat group="{{@size}}" value="{{@sizeOption}}">
+                <option>{{@sizeOption}}</option>
+            </repeat>
+
+        </select>
 
         <br>
         <input type="submit" value="Place Order">
